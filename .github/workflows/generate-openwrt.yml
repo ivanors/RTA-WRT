@@ -205,6 +205,7 @@ jobs:
           echo -e "[\033[95m STEPS \033[0m] Replace Name"
           search_replace_patterns=(
               "bcm27xx-bcm2710-rpi-3|Raspberry-Pi-3_ext4-sysupgrade"
+              "bcm27xx-bcm2711-rpi-4|Raspberry-Pi-4_ext4-factory"
               "bcm27xx-bcm2711-rpi-4|Raspberry-Pi-4_ext4-sysupgrade"
               "rockchip-armv8-friendlyarm_nanopi-r2c|NanoPi_R2C_ext4-sysupgrade"
               "rockchip-armv8-friendlyarm_nanopi-r2s|NanoPi_R2S_ext4-sysupgrade"
