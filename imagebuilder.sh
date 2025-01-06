@@ -534,6 +534,9 @@ rebuild_firmware() {
     
     # Modem Tools
     PACKAGES+=" modeminfo luci-app-modeminfo atinout modemband luci-app-modemband sms-tool luci-app-sms-tool-js luci-app-lite-watchdog luci-app-3ginfo-lite picocom minicom"
+    
+    # Custom Package
+    PACKAGES+=" luci-theme-argon luci-theme-alpha luci-app-alpha-config luci-app-ipinfo luci-app-adguardhome"
 
     # Tunnel option
     OPENCLASH="coreutils-nohup bash dnsmasq-full curl ca-certificates ipset ip-full libcap libcap-bin ruby ruby-yaml kmod-tun kmod-inet-diag unzip kmod-nft-tproxy luci-compat luci luci-base luci-app-openclash"
