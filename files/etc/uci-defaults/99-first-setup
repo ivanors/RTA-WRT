@@ -9,6 +9,11 @@ msg() {
     logger -p "notice" "[ INFO FIRST SETUP ] $1"
 }
 
+# Set argon as default theme
+uci set argon.@global[0].mode='light'
+uci set luci.main.mediaurlbase='/luci-static/argon'
+uci commit
+
 # dont remove!
 msg "Installed Time: $(date '+%A, %d %B %Y %T')"
 msg "###############################################"
