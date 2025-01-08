@@ -15,7 +15,7 @@
 Builder With ImageBuilder
 </p>
 <p align="center">
-Custom Script By FriWrt
+Custom Script By IvanOrs
 </p>
 <br>
 
