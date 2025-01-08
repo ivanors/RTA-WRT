@@ -4,7 +4,7 @@
 
 </h1>
 
-<h3 align="center">OpenWrt - 23.05.5 | ImmortalWrt - 23.05.4</h3>
+<h3 align="center">OpenWrt - 24.10.0 RC5 | ImmortalWrt - 24.10.0 RC3</h3>
 
 <!-- <h4 align="center">Join Telegram Untuk Mendapatkan Notifikasi Update Dan Tutorial</h4>
 <p align="center">
