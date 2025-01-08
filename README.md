@@ -22,7 +22,7 @@ Custom Script By IvanOrs
 # Link Download
 
 <p align="center">
-<a href="https://github.com/rizkikotet-dev/RTA-WRT/releases/"><img alt="Static Badge" src="https://img.shields.io/badge/Click_Here-openwrt?style=for-the-badge&logo=openwrt&label=Download&color=%231aa5de"></a>
+<a href="https://github.com/ivanors/RTA-WRT/releases/"><img alt="Static Badge" src="https://img.shields.io/badge/Click_Here-openwrt?style=for-the-badge&logo=openwrt&label=Download&color=%231aa5de"></a>
 
 ---
 
