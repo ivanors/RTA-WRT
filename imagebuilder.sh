@@ -536,6 +536,9 @@ rebuild_firmware() {
     
     # Custom Package
     PACKAGES+=" luci-theme-argon luci-theme-alpha luci-app-alpha-config luci-app-ipinfo luci-app-temp-status luci-app-cpu-status-mini"
+	
+	# Sing-boxTproxy
+    PACKAGES+=" kmod-ip6tables kmod-nf-conntrack6 kmod-nf-log6 kmod-nf-nat6 kmod-nf-reject6 libip6tc2 libiptext-nft0 libiptext6-0 libxtables12 luci-proto-ipv6 odhcpd-ipv6only nftables-json iptables-nft kmod-nft-compat kmod-nft-core kmod-nft-fib kmod-nft-nat kmod-nft-offload kmod-nft-socket kmod-nft-tproxy libnftnl11 libiptext-nft0 xtables-nft"
 
     # Tunnel option
     OPENCLASH="coreutils-nohup bash dnsmasq-full curl ca-certificates ipset ip-full libcap libcap-bin ruby ruby-yaml kmod-tun kmod-inet-diag unzip kmod-nft-tproxy luci-compat luci luci-base luci-app-openclash"
