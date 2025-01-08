@@ -384,6 +384,7 @@ custom_packages() {
         "xmm-modem|https://dl.openwrt.ai/packages-$CURVER/$ARCH_3/kiddin9"
         "luci-app-lite-watchdog|https://dl.openwrt.ai/packages-$CURVER/$ARCH_3/kiddin9"
         "luci-app-zerotier|https://dl.openwrt.ai/packages-$CURVER/$ARCH_3/kiddin9"
+	"luci-app-ipinfo|https://dl.openwrt.ai/packages-$CURVER/$ARCH_3/kiddin9"
 
         "luci-app-internet-detector|https://github.com/gSpotx2f/packages-openwrt/raw/refs/heads/master/current"
         "internet-detector|https://github.com/gSpotx2f/packages-openwrt/raw/refs/heads/master/current"
@@ -534,7 +535,7 @@ rebuild_firmware() {
     PACKAGES+=" modeminfo luci-app-modeminfo atinout modemband luci-app-modemband sms-tool luci-app-sms-tool-js luci-app-lite-watchdog luci-app-3ginfo-lite picocom minicom"
     
     # Custom Package
-    PACKAGES+=" luci-theme-argon luci-theme-alpha luci-app-alpha-config luci-app-ipinfo luci-app-adguardhome"
+    PACKAGES+=" luci-theme-argon luci-theme-alpha luci-app-alpha-config luci-app-ipinfo luci-app-temp-status luci-app-cpu-status-mini"
 
     # Tunnel option
     OPENCLASH="coreutils-nohup bash dnsmasq-full curl ca-certificates ipset ip-full libcap libcap-bin ruby ruby-yaml kmod-tun kmod-inet-diag unzip kmod-nft-tproxy luci-compat luci luci-base luci-app-openclash"
