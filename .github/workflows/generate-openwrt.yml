@@ -206,6 +206,7 @@ jobs:
           search_replace_patterns=(
               "bcm27xx-bcm2710-rpi-3|Raspberry-Pi-3_ext4-sysupgrade"
               "bcm27xx-bcm2711-rpi-4|Raspberry-Pi-4_ext4-factory"
+              "bcm27xx-bcm2711-rpi-4|Raspberry-Pi-4_ext4-sysupgrade"
               "rockchip-armv8-friendlyarm_nanopi-r2c|NanoPi_R2C_ext4-sysupgrade"
               "rockchip-armv8-friendlyarm_nanopi-r2s|NanoPi_R2S_ext4-sysupgrade"
               "rockchip-armv8-friendlyarm_nanopi-r4s|NanoPi_R4S_ext4-sysupgrade"
@@ -227,9 +228,9 @@ jobs:
                   if [[ -f "$file" ]]; then
                       if [[ "${{ env.TARGET_NAME }}" == "amlogic" ]]; then
                         kernel=$(echo "$file" | grep -oP 'k[0-9.]+')
-                        new_name="RTA-WRT_${{ env.RELEASES_TAG }}_${replace}_${kernel}.img.gz"
+                        new_name="IORS-WRT_${{ env.RELEASES_TAG }}_${replace}_${kernel}.img.gz"
                       else
-                        new_name="RTA-WRT_${{ env.RELEASES_TAG }}_${replace}.img.gz"
+                        new_name="IORS-WRT_${{ env.RELEASES_TAG }}_${replace}.img.gz"
                       fi
                       echo -e "[\033[94m INFO \033[0m] Renaming: $file -> $new_name"
                       mv "$file" "compiled_images_${{ env.TAG_NAME }}/$new_name"
@@ -255,22 +256,22 @@ jobs:
           file_glob: true
           file: imagebuilder/compiled_images_${{ env.TAG_NAME }}/*.img.gz
           tag: ${{ env.RELEASES_TAG }}-${{ env.DATE }}
-          release_name: RTA-WRT - ${{ env.RELEASES_TAG }}-${{ env.DATE }}
+          release_name: IORS-WRT - ${{ env.RELEASES_TAG }}-${{ env.DATE }}
           overwrite: true
           prerelease: false
           body: |
             ![GitHub Downloads (all assets, specific tag)](https://img.shields.io/github/downloads/rtaserver/RTA-WRT/${{ env.RELEASES_TAG }}-${{ env.DATE }}/total?style=for-the-badge&logo=Openwrt)
-            ### RTA-WRT ${{ env.BASE }}-${{ env.BRANCH }} Image information
+            ### IORS-WRT ${{ env.BASE }}-${{ env.BRANCH }} Image information
         
                   
             ${{ steps.changelog.outputs.CHANGELOG }}
         
                   
-            See [here](https://github.com/rtaserver/RTA-WRT?tab=readme-ov-file#detail-firmware) for more detail feature and other information.
+            See [here](https://github.com/ivanors/RTA-WRT?tab=readme-ov-file#detail-firmware) for more detail feature and other information.
             - Default IP: 192.168.1.1
             - Default username: root
-            - Default password: rtawrt
-            - Default WIFI name: RTAWRT_2g | RTAWRT_5g (if device supported)
+            - Default password: 232414
+            - Default WIFI name: RASPI 4B | RASPI 4B 5G (if device supported)
 
 
 
@@ -321,10 +322,10 @@ jobs:
           ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
                           NEW UPDATE
           ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-          NAME   : 🔔 RTA\-WRT OpenWRT
+          NAME   : 🔔 IORS-WRT OpenWRT
           TAG       : $NEWTAG
           DATE     : ${DATE2}
-          REPO    : rizkikotet\-dev/RTA\-WRT
+          REPO    : Ivanors/IORS\-WRT
           ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
           EOF
           )
@@ -332,7 +333,7 @@ jobs:
           BUTTONS='{
               "inline_keyboard": [
                   [
-                      {"text": "KLIK DISINI", "url": "https://github.com/rizkikotet-dev/RTA-WRT"}
+                      {"text": "KLIK DISINI", "url": "https://github.com/ivanors/RTA-WRT"}
                   ]
               ]
           }'
@@ -362,7 +363,7 @@ jobs:
       #     MESSAGE=$(cat <<-END
       #     <blockquote>🟢 NEW UPDATE AVAILABLE 🟢</blockquote>
 
-      #     <blockquote>➣ Name: RTA-WRT</blockquote>
+      #     <blockquote>➣ Name: IORS-WRT</blockquote>
       #     <blockquote>➣ Tag: ${OPENWRT_BASE}_${OPENWRT_BRANCH}-$DATE</blockquote>
       #     <blockquote>➣ Date : $DATE</blockquote>
 
