@@ -1,0 +1,56 @@
+
+config interface 'loopback'
+	option device 'lo'
+	option proto 'static'
+	option ipaddr '127.0.0.1'
+	option netmask '255.0.0.0'
+
+config globals 'globals'
+	option ula_prefix 'fdcb:1f99:59e3::/48'
+
+config device
+	option name 'br-lan'
+	option type 'bridge'
+	list ports 'eth0'
+
+config interface 'lan'
+	option device 'br-lan'
+	option proto 'static'
+	option ipaddr '192.168.1.1'
+	option netmask '255.255.255.0'
+	option delegate '0'
+
+config interface 'wan'
+	option proto 'dhcp'
+	option device 'eth1'
+
+config interface 'modemmanager'
+	option proto 'modemmanager'
+	option device '/sys/devices/platform/scb/fd500000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0/usb2/2-1'
+	option apn 'internet'
+	option auth 'none'
+	option iptype 'ipv4'
+	option force_connection '1'
+
+config interface 'tethering'
+	option proto 'dhcp'
+	option device 'usb0'
+
+config interface 'singbox'
+	option proto 'none'
+	option device 'tun0'
+
+config interface 'mihomo'
+	option proto 'none'
+	option device 'mihomo'
+
+config interface 'vpn'
+	option proto 'none'
+	option device 'zt3jn5dhg2'
+
+config interface 'tailscale'
+	option proto 'static'
+	option ipaddr '100.96.206.7'
+	option netmask '255.0.0.0'
+	option device 'tailscale0'
+
