@@ -547,7 +547,7 @@ rebuild_firmware() {
     PACKAGES+=" $OPENCLASH $MIHOMO $PASSWALL"
 
     # Remote Services
-    PACKAGES+=" luci-app-zerotier luci-app-cloudflared tailscale luci-app-tailscale"
+    PACKAGES+=" tailscale luci-app-tailscale zerotier luci-app-zerotier luci-app-cloudflared"
 
     # NAS and Hard disk tools
     PACKAGES+=" luci-app-diskman luci-app-disks-info smartmontools kmod-usb-storage kmod-usb-storage-uas ntfs-3g"
